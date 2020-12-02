@@ -30,7 +30,7 @@ https.get('https://api.github.com/users/' + user + '/repos', options, (resp) => 
              }
             
             // CommitsList has now the list of all user commits
-            // Now sort commitsList by date
+            // Now sort commitsList by date in descending order
             commitsList.sort((a, b) => a - b);
 
             // Then cut the last 60 commits only

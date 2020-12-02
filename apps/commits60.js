@@ -43,7 +43,7 @@ https.get('https://api.github.com/users/' + user + '/repos', options, (resp) => 
                 const date1 = Date.parse(commitsList[index])
                 const date2 = Date.parse(commitsList[index + 1])
 
-                sumOfDifferences += date2 - date1;
+                sumOfDifferences += date1 - date2;
             }
 
             var averageTime = sumOfDifferences / (commitsList.length - 1)

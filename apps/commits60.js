@@ -47,7 +47,7 @@ https.get('https://api.github.com/users/' + user + '/repos', options, (resp) => 
             }
 
             var averageTime = sumOfDifferences / (commitsList.length - 1)
-            console.log("Average Time: ", averageTime)
+            console.log("Average Time: ", averageTime/1000/60/60, "hr")
             const writeStream = fs.createWriteStream('commits.csv');           
             writeStream.write('"' + commitsList.join('"\n"') + '"\n');
 
